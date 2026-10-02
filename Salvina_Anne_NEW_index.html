@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Salvina Anne Hair Extensions | Melbourne</title>
+<meta name="description" content="Salvina Anne Hair Extensions — luxury weft, tape and butterfly hair extensions in Melbourne. Luxury. Glam. Confidence.">
+
+<style>
+:root{
+  --black:#050505;
+  --black2:#0d0d0d;
+  --gold:#d7ad62;
+  --gold-light:#f0d59a;
+  --rose:#d49a9f;
+  --ivory:#f7f0e8;
+  --grey:#bdb5ad;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  background:var(--black);
+  color:var(--ivory);
+  font-family:Arial,Helvetica,sans-serif;
+  line-height:1.6;
+}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+.container{width:min(1150px,92%);margin:auto}
+
+/* NAV */
+nav{
+  position:fixed;
+  top:0;left:0;width:100%;
+  z-index:1000;
+  background:rgba(5,5,5,.96);
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid rgba(215,173,98,.25);
+}
+.nav-inner{
+  min-height:78px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
+}
+.nav-logo{width:125px;height:auto}
+.nav-links{
+  display:flex;
+  gap:28px;
+  align-items:center;
+  font-size:12px;
+  text-transform:uppercase;
+  letter-spacing:1.5px;
+}
+.nav-links a{transition:.3s}
+.nav-links a:hover{color:var(--rose)}
+
+/* HERO */
+.hero{
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  overflow:hidden;
+  padding-top:80px;
+  background:
+    radial-gradient(circle at 80% 20%,rgba(212,154,159,.14),transparent 30%),
+    radial-gradient(circle at 15% 70%,rgba(215,173,98,.10),transparent 35%),
+    var(--black);
+}
+.hero-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  align-items:center;
+  gap:55px;
+}
+.motto{
+  color:var(--rose);
+  text-transform:uppercase;
+  letter-spacing:4px;
+  font-size:12px;
+  margin-bottom:20px;
+}
+.hero h1{
+  font-family:Georgia,serif;
+  font-size:clamp(45px,6vw,82px);
+  line-height:1;
+  font-weight:400;
+  margin-bottom:24px;
+}
+.hero h1 span{color:var(--gold)}
+.hero p{
+  max-width:550px;
+  color:var(--grey);
+  font-size:18px;
+}
+.hero-image{position:relative}
+.hero-image img{
+  width:100%;
+  height:620px;
+  object-fit:cover;
+  border-radius:2px;
+}
+.hero-image:after{
+  content:"";
+  position:absolute;
+  inset:18px -18px -18px 18px;
+  border:1px solid rgba(212,154,159,.5);
+  z-index:-1;
+}
+
+/* SECTIONS */
+section{padding:110px 0}
+.section-heading{text-align:center;margin-bottom:60px}
+.eyebrow{
+  color:var(--rose);
+  text-transform:uppercase;
+  letter-spacing:4px;
+  font-size:11px;
+  margin-bottom:12px;
+}
+.section-heading h2{
+  font-family:Georgia,serif;
+  font-size:48px;
+  font-weight:400;
+}
+.section-heading p{
+  max-width:650px;
+  margin:18px auto 0;
+  color:var(--grey);
+}
+
+/* SERVICES */
+.services{background:var(--black2)}
+.services-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:18px;
+}
+.service{
+  background:#111;
+  border:1px solid rgba(215,173,98,.18);
+  overflow:hidden;
+  transition:.3s;
+}
+.service:hover{
+  transform:translateY(-6px);
+  border-color:rgba(212,154,159,.6);
+}
+.service img{
+  width:100%;
+  height:360px;
+  object-fit:cover;
+}
+.service-content{padding:25px}
+.service h3{
+  font-family:Georgia,serif;
+  font-size:27px;
+  color:var(--gold-light);
+  margin-bottom:10px;
+}
+.service p{color:var(--grey);font-size:14px}
+
+/* FEATURE */
+.feature{
+  background:
+    linear-gradient(rgba(5,5,5,.84),rgba(5,5,5,.92)),
+    radial-gradient(circle at center,rgba(212,154,159,.18),transparent 50%);
+  text-align:center;
+}
+.feature-box{
+  max-width:800px;
+  margin:auto;
+  border:1px solid rgba(215,173,98,.3);
+  padding:65px 35px;
+}
+.feature h2{
+  font-family:Georgia,serif;
+  font-size:45px;
+  font-weight:400;
+  color:var(--gold-light);
+  margin-bottom:20px;
+}
+.feature p{
+  color:var(--grey);
+  max-width:650px;
+  margin:auto;
+}
+
+/* TRANSFORMATIONS */
+.gallery{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:15px;
+}
+.gallery img{
+  width:100%;
+  height:400px;
+  object-fit:cover;
+  transition:.4s;
+}
+.gallery img:hover{transform:scale(1.02)}
+
+/* ABOUT */
+.about{background:var(--black2)}
+.about-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:70px;
+  align-items:center;
+}
+.about-image{position:relative}
+.about-image img{
+  width:100%;
+  max-height:650px;
+  object-fit:cover;
+}
+.about-image:after{
+  content:"";
+  position:absolute;
+  left:-15px;
+  bottom:-15px;
+  width:80%;
+  height:80%;
+  border:1px solid rgba(212,154,159,.5);
+  z-index:-1;
+}
+.about-copy h2{
+  font-family:Georgia,serif;
+  font-size:50px;
+  font-weight:400;
+  margin-bottom:22px;
+}
+.about-copy h2 span{color:var(--gold)}
+.about-copy p{color:var(--grey);margin-bottom:18px}
+.signature{
+  color:var(--rose);
+  font-family:Georgia,serif;
+  font-size:25px;
+  margin-top:28px;
+}
+
+/* CONTACT */
+.contact{
+  text-align:center;
+  background:
+    radial-gradient(circle at center,rgba(215,173,98,.13),transparent 50%),
+    var(--black);
+}
+.contact h2{
+  font-family:Georgia,serif;
+  font-size:52px;
+  font-weight:400;
+  margin-bottom:20px;
+}
+.contact>div>p{
+  color:var(--grey);
+  max-width:600px;
+  margin:0 auto 12px;
+}
+.contact-details{margin-top:35px}
+.contact-details p{color:var(--grey);margin:10px 0}
+.contact-details a{transition:.3s}
+.contact-details a:hover{color:var(--rose)}
+
+/* FOOTER */
+footer{
+  border-top:1px solid rgba(215,173,98,.2);
+  padding:35px 0;
+  text-align:center;
+  color:#888;
+  font-size:12px;
+}
+.footer-brand{
+  color:var(--gold);
+  font-family:Georgia,serif;
+  font-size:20px;
+  margin-bottom:8px;
+}
+
+/* MOBILE */
+@media(max-width:900px){
+  .nav-links{gap:18px;font-size:10px}
+  .nav-logo{width:95px}
+  .hero-grid,.about-grid{grid-template-columns:1fr}
+  .hero{padding-top:120px}
+  .hero-image{order:-1}
+  .hero-image img{height:500px}
+  .services-grid{grid-template-columns:repeat(2,1fr)}
+  .gallery{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:600px){
+  .nav-inner{min-height:68px}
+  .nav-links{gap:12px}
+  .nav-links a{font-size:9px}
+  section{padding:80px 0}
+  .hero h1{font-size:50px}
+  .hero p{font-size:16px}
+  .hero-image img{height:430px}
+  .services-grid,.gallery{grid-template-columns:1fr}
+  .service img{height:420px}
+  .gallery img{height:500px}
+  .section-heading h2,.about-copy h2,.contact h2{font-size:38px}
+  .feature h2{font-size:35px}
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+  <div class="container nav-inner">
+    <a href="#top">
+      <img src="logo.jpg" class="nav-logo" alt="Salvina Anne Hair Extensions">
+    </a>
+    <div class="nav-links">
+      <a href="#services">Services</a>
+      <a href="#transformations">Transformations</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="container hero-grid">
+    <div>
+      <div class="motto">Luxury. Glam. Confidence.</div>
+      <h1>Luxury Hair.<br><span>Unforgettable Glam.</span></h1>
+      <p>
+        Premium hair extensions designed to transform your look,
+        elevate your confidence and make every day feel glamorous.
+      </p>
+    </div>
+    <div class="hero-image">
+      <img src="Screenshot_20261001_084044_Gallery.jpg"
+           alt="Luxury hair extensions by Salvina Anne Hair">
+    </div>
+  </div>
+</header>
+
+<section class="services" id="services">
+  <div class="container">
+    <div class="section-heading">
+      <div class="eyebrow">Signature Services</div>
+      <h2>Choose Your Transformation</h2>
+      <p>
+        Luxury extension services tailored to create beautiful,
+        natural-looking length, volume and glamour.
+      </p>
+    </div>
+
+    <div class="services-grid">
+
+      <article class="service">
+        <img src="Screenshot_20261001_084044_Gallery.jpg"
+             alt="Weft hair extensions">
+        <div class="service-content">
+          <h3>Weft</h3>
+          <p>
+            Beautiful, luxurious weft extensions designed for
+            effortless volume and length.
+          </p>
+        </div>
+      </article>
+
+      <article class="service">
+        <img src="Screenshot_20261001_094407_Gallery.jpg"
+             alt="Tape hair extensions">
+        <div class="service-content">
+          <h3>Tape</h3>
+          <p>
+            Lightweight tape extensions for gorgeous,
+            comfortable everyday glamour.
+          </p>
+        </div>
+      </article>
+
+      <article class="service">
+        <img src="Screenshot_20261001_094357_Gallery.jpg"
+             alt="Butterfly Weft hair extensions">
+        <div class="service-content">
+          <h3>Butterfly</h3>
+          <p>
+            A stunning extension option created for beautiful
+            movement, volume and luxury.
+          </p>
+        </div>
+      </article>
+
+      <article class="service">
+        <img src="Screenshot_20261001_094425_Gallery.jpg"
+             alt="Hair extension removal service">
+        <div class="service-content">
+          <h3>Removal</h3>
+          <p>
+            Professional extension removal performed with care
+            to help protect your natural hair.
+          </p>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<section class="feature">
+  <div class="container">
+    <div class="feature-box">
+      <div class="eyebrow">Salvina Anne Hair</div>
+      <h2>Butterfly Weft Training</h2>
+      <p>
+        Learn the techniques behind beautiful Butterfly Weft
+        installations and create luxury extension results
+        with confidence.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section id="transformations">
+  <div class="container">
+    <div class="section-heading">
+      <div class="eyebrow">The Transformation</div>
+      <h2>Luxury Looks</h2>
+      <p>Real hair. Real transformations. Real confidence.</p>
+    </div>
+
+    <div class="gallery">
+      <img src="Screenshot_20261001_084044_Gallery.jpg"
+           alt="Salvina Anne Hair transformation">
+      <img src="Screenshot_20261001_094407_Gallery.jpg"
+           alt="Salvina Anne Hair tape extensions">
+      <img src="Screenshot_20261001_094357_Gallery.jpg"
+           alt="Salvina Anne Hair Butterfly Weft">
+      <img src="Screenshot_20261001_094425_Gallery.jpg"
+           alt="Salvina Anne Hair extension removal">
+    </div>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <div class="container about-grid">
+
+    <div class="about-image">
+      <img src="meet-sammy.jpg"
+           alt="Sammy from Salvina Anne Hair">
+    </div>
+
+    <div class="about-copy">
+      <div class="eyebrow">Meet Sammy</div>
+      <h2>Hair That Makes You Feel <span>Beautiful.</span></h2>
+
+      <p>
+        Salvina Anne Hair was created from a passion for beautiful
+        hair, luxury and the confidence that comes with feeling
+        amazing in your own skin.
+      </p>
+
+      <p>
+        Every appointment is focused on creating a personalised
+        extension experience where quality, care and glamour come
+        together.
+      </p>
+
+      <p>
+        Whether you're looking for length, volume or a complete
+        transformation, your hair should make you feel confident,
+        feminine and unforgettable.
+      </p>
+
+      <div class="signature">Luxury. Glam. Confidence.</div>
+    </div>
+
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="container">
+
+    <div class="eyebrow">Get In Touch</div>
+    <h2>Let's Talk Hair.</h2>
+
+    <p>
+      Have a question about extensions, maintenance or finding
+      the right look for you?
+    </p>
+
+    <div class="contact-details">
+      <p>
+        📞 <a href="tel:0433769292">0433 769 292</a>
+      </p>
+      <p>
+        ✉️ <a href="mailto:salvina.annehair@gmail.com">
+          salvina.annehair@gmail.com
+        </a>
+      </p>
+      <p>
+        Instagram:
+        <a href="https://instagram.com/salvinaanne"
+           target="_blank" rel="noopener">
+          @salvinaanne
+        </a>
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-brand">Salvina Anne Hair</div>
+    <div>Luxury. Glam. Confidence.</div>
+    <div style="margin-top:10px;">
+      © 2026 Salvina Anne Hair. All rights reserved.
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
